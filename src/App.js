@@ -41,7 +41,6 @@ class App extends Component {
   haldleSubmit = e => {
     e.preventDefault();
     if (this.state.item.trim() !== ''){
-      console.log('here we are')
           const newItem= {
           id:this.state.id,
           title:this.state.item,

@@ -8,10 +8,7 @@ function TodoItem  (props) {
             <span className={checked ? "mx-2 text-success": "mx-2"} onClick = {handleChecked}>
                 <i className={checked ? "fas fa-check-circle": "far fa-circle"} ></i>
             </span>
-            {/* <span className="mx-2 text-success" >
-                <i className="fas fa-check-circle"></i>
-            </span> */}
-           <h6>{title}</h6>
+           <h6 style={{"textDecoration": checked ?"line-through": "none"}}>{title}</h6>
             <div className="todo-icon">
                 <span className="mx-2 text-success" onClick = {handleEdit}>
                     <i className="fas fa-pen"></i>

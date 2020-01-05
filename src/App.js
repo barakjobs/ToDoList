@@ -20,15 +20,28 @@ class App extends Component {
   }
 
   handleChecked = (id) => {
+    const filterItem = this.state.items.filter( item => 
+      item.id !== id);
+    const selectedItem = this.state.items.find( item => item.id === id);
+    const position = this.state.items.indexOf(selectedItem)
+    
+    const newItem= {
+      id: id,
+      title: selectedItem.title,
+      checked: !selectedItem.checked
+    }
+    // const updateItems = this.state.items;
+    filterItem.splice(position, 0, newItem);
     this.setState({
-      checked : !(this.state.checked)
+      items: filterItem
     });
   }
 
 
   haldleSubmit = e => {
     e.preventDefault();
-    if (this.state.item !== ''){
+    if (this.state.item.trim() !== ''){
+      console.log('here we are')
           const newItem= {
           id:this.state.id,
           title:this.state.item,
@@ -93,7 +106,6 @@ class App extends Component {
             handleDelete={this.handleDelete}
             handleEdit={this.handleEdit} 
             handleChecked={this.handleChecked}
-            checked={this.state.checked}
           />
         </div>
       </div>

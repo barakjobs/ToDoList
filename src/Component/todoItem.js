@@ -5,7 +5,7 @@ function TodoItem  (props) {
     return (
         <li className ="list-group-item text-capitalize d-flex 
         justify-content-between my-2">
-            <span className="mx-2" onClick = {handleChecked}>
+            <span className={checked ? "mx-2 text-success": "mx-2"} onClick = {handleChecked}>
                 <i className={checked ? "fas fa-check-circle": "far fa-circle"} ></i>
             </span>
             {/* <span className="mx-2 text-success" >

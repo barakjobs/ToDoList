@@ -2,7 +2,7 @@ import React from "react";
 import TodoItem from './todoItem';
 
 function TodoList (props){
-    const {items, clearList, handleDelete, handleEdit, handleChecked, checked} = props
+    const {items, clearList, handleDelete, handleEdit, handleChecked} = props
     return (
         <ul className="list-group my-5">
             <h3 className="text-capitalize text-center">todo list</h3>
@@ -14,7 +14,7 @@ function TodoList (props){
                             title ={item.title} 
                             handleDelete = {() => handleDelete(item.id)} 
                             handleEdit = {() => handleEdit(item.id)}
-                            checked = {checked}
+                            checked = {item.checked}
                             handleChecked={() => handleChecked(item.id)}
                         />
                     )

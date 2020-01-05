@@ -1,3 +1,6 @@
+This project is the default React application installed by "npx create-react-app react-app".
+Create React App is a comfortable environment for learning React, and is the best way to start building a new single-page application in React.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
